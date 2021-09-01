@@ -24,6 +24,13 @@ int main(int argc, const char** argv) {
     while (cin >> word) 
         text.push_back(word);
 
+    vector<int> v{1,2,3,4,5,6};
+    for (auto & i : v)
+        i *= i;
+    for (auto i : v)
+        cout << i << " ";
+    cout << endl;
+
     return 0;
 
 }
