@@ -21,5 +21,10 @@ int main(int argc, const char** argv) {
     for (auto it = text.cbegin();
         it != text.cend() && !it->empty(); ++it)
         cout << *it << endl;
+    
+    vector<int> vi {1,2,3,4,5,6,7,8,9};
+    auto mid = vi.begin() + (vi.size()/2);
+    cout << *mid << endl;
+
     return 0;
 }

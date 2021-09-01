@@ -39,3 +39,12 @@ The arrow operator combines deference and member access into a single operation
 Any operation, such as push_back, that changes the size of a vector potentially invalidates all iterators into that vector
 
 For now, it is important to realize that loops that use iterators should not add elements to the container to which the iterators refer
+
+### iterator arithmetic
+
+```cpp
+iter + n
+iter += n
+iter1 - iter2
+```
+
