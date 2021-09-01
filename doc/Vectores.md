@@ -31,6 +31,25 @@ It is often unnecesary to define a vector of a specefic size, because the vector
 
 > We cannot use a range for if the body of the loop adds elemtens to the vector
 
+### vector operations
+```cpp
+v.ecmpty()
+v.size()                // returns a value of the size_type defined by the corresponding vector type
+v.push_back(t)
+v[n]
+v1 = v2                 // replaces the elements in v1 with a copy of the elements in v2
+v1 = {a, b, c, ...}     // replaces the elements in v1 with a copy of the elements in the comma separated list
+v1 == v2                
+v1 != v2
+<,<=,>,>=
+```
+
+To use size_type, we must name the type in which it is defined. A vector type always includes its element type
+```cpp
+vector<int>::size_type      // ok
+vector::size_type           // error
+
+
 
 
 

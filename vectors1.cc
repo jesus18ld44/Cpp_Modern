@@ -29,6 +29,8 @@ int main(int argc, const char** argv) {
         i *= i;
     for (auto i : v)
         cout << i << " ";
+    
+    cout << v.size();
     cout << endl;
 
     return 0;
