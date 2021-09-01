@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <cctype>
 
 using namespace std;
 using std::string;
@@ -13,8 +14,13 @@ int main(int argc, const char** argv) {
         auto it = s.begin();
         *it = toupper(*it);
     }
-
     cout << s << endl;
     
+    for (auto it = s.begin(); it != s.end(); ++it) {
+        *it = toupper(*it);
+    }
+
+    cout << s << endl;
+
     return 0;
 }
