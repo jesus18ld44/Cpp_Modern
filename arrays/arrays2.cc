@@ -15,8 +15,25 @@ int main() {
     // for (auto idx : *ptrArr)
     //     cout << idx << endl;
 
-    cout << "*ptrArr: " << **ptrArr << " " << "ptrArr: " << ptrArr << " " << "ptrArr++: " << ptrArr++ << endl;
-    cout << "ptr: " << *ptr << " " << "ptr++" << ptr++ << endl;
+    for (auto i : *ptrArr) {
+        cout << "ptr[]: " << (i) << endl;
+    }
+
+    string nums[] = {"one", "two", "three"};
+    
+    string * p1 = &nums[0];
+    string * p2 = nums;      //both are equivalent
+
+    cout << *p1 << " " << *p2 << endl;
+
+    string (*pString)[3] = &nums;   
+    for (auto i : *pString)
+        cout << "pString: " << i << endl; 
+    
+    string *beg = begin(nums);      // pointer to the first element in ia
+    cout << "*beg: " << *beg << endl;
+    cout << "++(*beg): " << *(++beg) << endl;
+    
 
     return 0;
 }

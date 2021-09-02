@@ -22,3 +22,45 @@ const char a4[6] = "Daniel";        // error: no space for the null!
 ```
 
 The dimension of a1 is 3; the dimensions of a2 and a3 are both 4
+
+### Pointer to array
+```cpp
+constexpr unsigned sz = 5;
+int arr[]{0,1,2,3,4};
+
+int (*ptrArr)[sz] = &arr;
+
+for (auto i : *ptrArr) {
+    cout << "ptr[]: " << (i) << endl;
+}
+
+```
+
+```cpp
+string nums[] = {"one", "two", "three"};
+
+string * p1 = &nums[0];
+string * p2 = nums;      //both are equivalent
+
+cout << *p1 << " " << *p2 << endl;
+
+string (*pString)[3] = &nums;   
+for (auto i : *pString)
+    cout << "pString: " << i << endl; 
+```
+
+## C strings
+
+std::string::c_string() returns a C-style character string. That is, it returns a pointer to the beginning of a null-terminated char array that holds the same data as the characters in the string.
+The type of the pointer is 
+> const char*
+
+## Using an array to initialize a vector
+
+We cannot initialize a built-in array from another array. Nor can we initialize an array form a vector. However, we can use an array to initialize a vector
+
+```cpp
+int int_arr[] = {0,1,2,3,4,5};
+vector<int> ivec(begin(int_arr), end(int_arr));
+```
+
