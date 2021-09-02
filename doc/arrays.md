@@ -63,4 +63,11 @@ We cannot initialize a built-in array from another array. Nor can we initialize 
 int int_arr[] = {0,1,2,3,4,5};
 vector<int> ivec(begin(int_arr), end(int_arr));
 ```
+The specified range can be a subset of the array
+```cpp
+vector<int> subVec(int_arr + 1, int_arr + 4);
+```
 
+### Advice: Use library types instead of arrays
+
+## Multidimensional arrays
