@@ -71,3 +71,16 @@ vector<int> subVec(int_arr + 1, int_arr + 4);
 ### Advice: Use library types instead of arrays
 
 ## Multidimensional arrays
+
+```cpp
+for (const auto &row : ia)
+    for (auto col : row)
+        cout << col << endl;
+```
+If row is not a reference the program will not compile. The first for iterates through 'ia', whose elements are arrays of
+size 4. Because row is not a reference, when the compiler initializes row it will convert each array element to a pointer to that 
+array's first element. As a result, in this loop the type of row is int*. 
+
+> To use a multidimensional array in a range for, the loop control variable for all but the innermost array must be references
+
+
