@@ -22,4 +22,4 @@ En C++ los nombre tienen un ámbito, y los objetos un tiempo de vida
 Los parametros y variables definidas dentro del cuerpo de una funcion se llaman variables locales. Son 'locales' 
 a esa funcion y 'ocultan' las declaraciones del mismo nombre en un ambito exterior
 
-
+## Paso de argumentos
