@@ -4,6 +4,7 @@
 
 Argumentos son los inicializadores para los parametros de una funcion. 
 
+```cpp
 int suma (int a, int b);
                      ^ parametro
               ^ parametro
@@ -11,6 +12,7 @@ int suma (int a, int b);
 suma(3,5);
        ^ argumento
      ^ argumento
+```
 
 ## Objetos locales
 En C++ los nombre tienen un ámbito, y los objetos un tiempo de vida
