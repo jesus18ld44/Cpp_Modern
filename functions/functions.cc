@@ -34,9 +34,37 @@ string::size_type find_char(const string &s, char c, string::size_type &occurs) 
     return ret;
 }
 
+void print(const int *arr) {
+    if (arr)
+        while (*arr)
+            cout << *arr++;
+}
+void print(const int *beg, const int *end) {
+    while (beg!=end)
+        cout << *beg++ << endl;
+}
+
+int* sumaArrays(const int *array1, const int *array2) {
+    
+    decltype(sizeof(array1)/sizeof(*array1)) lon = sizeof(array1)/sizeof(*array1);
+    int *res = new int[5];
+
+    for (decltype(lon) idx = 0; idx != lon; ++idx) {
+        *res = *array1 + *array2;
+        ++array1;
+        ++array2;
+    }
+    
+    return res;
+}
+
 int main(int argc, const char** argv) {
     
+    int intArray[5]{1,2,3,4,5};
     int i = 5;
+    int array1[] = {1,1,1,1};
+    int array2[] = {2,2,2,2};
+
     reset(&i);
     cout << i << endl;
     
@@ -52,6 +80,15 @@ int main(int argc, const char** argv) {
     auto pos = find_char(s2, 's', cnt);
     cout << "Posicion primera 's' en 'Jesus': " << ++pos << endl 
         << "Numero de 's': " << cnt << endl;
+
+    print(begin(intArray), end(intArray));
+    cout << "Array: " << intArray << endl;      // intArray es un puntero al primer elemento
+    cout << "Tamaño: " << sizeof(intArray)/sizeof(intArray[0]) << endl;
+
+    // int *ret = new int[5];
+    int *ret = new int[5];
+    ret = sumaArrays(array1,array2);
+    print(ret);
 
     return 0;
 }
